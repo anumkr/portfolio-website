@@ -7,6 +7,7 @@
     <style>
         body{
             background-color: black;
+            font-family: 'Poppins', sans-serif;
         }
         h1{
             color: gold;
@@ -38,63 +39,99 @@
             border-radius: 5px;
             font-weight: bold;
             margin-left: 350px;
-            top: 250px;
-        }
-        .image{
-            position: relative;
-            height: 40px;
-            top:10px;
-            left:2px;
+            top: 25px;
+            text-decoration: none;
         }
         p{
             color: gold;
         }
-        .div1{
-            border: solid gold;
-            color: gold;
-            line-height: 5;
-            font-size: 20px;
-            font-weight: bolder;
-            height: 100px;
-            width:500px;
-            margin-top: 300px;
-            margin-left:400px;
-            border-radius: 20px;;
+        form {
+            width: 400px;       
+            margin: 50px auto;  
+            padding: 20px;
         }
-        .div2{
-            border: solid gold;
+        label{
             color: gold;
-            line-height: 5;
-            font-size: 20px;
-            font-weight: bolder;
-            height: 100px;
-            width:500px;
-            margin-top: 10px;
-            margin-left:400px;
-            border-radius: 20px;;
         }
-        .div3{
+        #name{
+            width: 250px;
+            background-color: black;
             border: solid gold;
-            color: gold;
-            line-height: 5;
-            font-size: 20px;
-            font-weight: bolder;
-            height: 115px;
-            width:500px;
-            margin-top: 10px;
-            margin-left:400px;
-            border-radius: 20px;;
+            color: white;
+            margin-left: 75px;
+
+        }
+        #email{
+            width: 250px;
+            background-color: black;
+            border: solid gold;
+            color: white;
+            margin-top: 20px;
+            margin-left: 75px;
+        }
+        #phone{
+            width: 250px;
+            background-color: black;
+            border: solid gold;
+            color: white;
+            margin-top: 20px;
+            margin-left: 17px;
+        }
+        #reason{
+            width: 250px;
+            background-color: black;
+            border: solid gold;
+            color: white;
+            margin-top: 20px;
+        }
+        #message{
+            width: 250px;
+            background-color: black;
+            border: solid gold;
+            color: white;
+            margin-top: 20px;
+            margin-left: 60px;
+        }
+        #msgbtn{
+            background-color: #c5a100;
+            color: black;
+            height: 50px;
+            width: 200px;
+            border-radius: 100px;
+            border: solid black;
+            font-weight: bold;
+            margin-left: 100px;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
     <h1>Contact Me</h1>
     <hr>
-    <p>
-        <div class="div1"><img class="image" src="user.png">Name: <br></div>
-        <div class="div2"><img class="image" src="email.png">Email: <br></div>
-        <div class="div3"><img class="image" src="msg.png">Message: </div>
-    </p>
+    <form action="index.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br>
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="reason" required>
+            <option value="">--Please choose an option--</option>
+            <option value="project">Project Inquiry</option>
+            <option value="collab">Collaboration</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <br>
+        <button type="submit" id="msgbtn">SEND MESSAGE</button>
+    </form>
         
     </ul>
     <a href="about.html" class="btn">About Me</a>
@@ -103,4 +140,3 @@
     
 </body>
 </html>
-
